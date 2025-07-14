@@ -14,9 +14,10 @@ const Riddle = sequelize.define('Riddle', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-}, {
+},
+{
   tableName: 'riddles', // תואם לשם בטבלה במסד הנתונים
   timestamps: false,     // אם אין createdAt / updatedAt
 });
-
+Riddle.sync();
 export default Riddle;
